@@ -72,7 +72,7 @@ def obtener_dispositivo(serial_number: str):
                 FROM dispositivos d
                 LEFT JOIN users u ON d.id_user = u.id
                 WHERE d.serial_number = %s
-            """, (serial_number,))
+            """, (serial_number,))  
             
             dispositivo = cursor.fetchone()
 
