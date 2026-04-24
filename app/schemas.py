@@ -9,8 +9,10 @@ class CrearDispositivo(BaseModel):
     tipo: str
     marca: str
     modelo: str
+    nombre_dispositivo: Optional[str] = None   # NUEVO
+    ubicacion: Optional[str] = None            # NUEVO
     imei: str | None = None
-    imei2: str | None = None         
+    imei2: str | None = None
     numero_linea: str | None = None
     color: str | None = None
     almacenamiento: str | None = None
@@ -25,8 +27,11 @@ class Dispositivo(BaseModel):
     tipo: str
     marca: str
     modelo: str
+    nombre_dispositivo: Optional[str] = None   # NUEVO
+    ubicacion: Optional[str] = None            # NUEVO
+    foto: Optional[str] = None                 # NUEVO
     imei: str | None = None
-    imei2: str | None = None          
+    imei2: str | None = None
     numero_linea: str | None = None
     color: str | None = None
     almacenamiento: str | None = None
@@ -37,11 +42,13 @@ class Dispositivo(BaseModel):
     propietario: str | None = None
 
 class ActualizarDispositivo(BaseModel):
+    nombre_dispositivo: Optional[str] = None   # NUEVO
+    ubicacion: Optional[str] = None            # NUEVO
     tipo: Optional[str] = None
     marca: Optional[str] = None
     modelo: Optional[str] = None
     imei: Optional[str] = None
-    imei2: Optional[str] = None      
+    imei2: Optional[str] = None
     numero_linea: Optional[str] = None
     color: Optional[str] = None
     almacenamiento: Optional[str] = None
